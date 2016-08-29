@@ -3,7 +3,7 @@ function getSound(x, y) {
     return "light";
   }
   if (x === 1 && y === 2) {
-    return "drops";
+    return "drips";
   }
   if (x === 2 && y === 2) {
     return "rats";
@@ -20,6 +20,9 @@ function getSound(x, y) {
 $(document).ready(function () {
   var mask1 = $('#mask1 circle')[0];
   var sound = null;
+
+  // Mute everything but ambience
+  $("audio:not(#ambience)").prop("volume", 0)
 
   $('.container').mousemove(function (event) {
       event.preventDefault();
@@ -56,11 +59,8 @@ $(document).ready(function () {
       x -= xGrid;
       y -= yGrid;
 
-      if (x >= 0 &&
-          x <= wGrid &&
-
-          y >= 0 &&
-          y <= hGrid) {
+      if (x >= 0 && x <= wGrid &&
+          y >= 0 && y <= hGrid) {
 
         var wCol = wGrid/5;
         var hRow = hGrid/3;
@@ -72,10 +72,10 @@ $(document).ready(function () {
 
         if (sound !== newSound) {
           if (sound) {
-            console.log("fade out", sound)
+            $("#"+sound).animate({volume: 0.0}, 1000);
           }
           if (newSound) {
-            console.log("fade in", newSound)
+            $("#"+newSound).animate({volume: 1.0}, 1000);
           }
           sound = newSound;
         }
