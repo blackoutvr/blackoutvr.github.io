@@ -87,9 +87,11 @@ $(document).ready(function () {
 
         if (sound !== newSound) {
           if (sound) {
+            console.log("fading out "+sound);
             $("#"+sound).animate({volume: 0.0}, 1000);
           }
           if (newSound) {
+            console.log("fading in "+newSound);
             $("#"+newSound).animate({volume: 1.0}, 1000);
           }
           sound = newSound;
