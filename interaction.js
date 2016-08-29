@@ -21,8 +21,23 @@ $(document).ready(function () {
   var mask1 = $('#mask1 circle')[0];
   var sound = null;
 
+  $('#about, #contact, #press').click(function() {
+    $('.container').fadeOut(3000)  
+  })
+
+  $('#mute').click(function() {
+    $('#mute i').toggleClass('fa-volume-up fa-volume-off')
+
+    $('audio').prop('muted', !$('#ambience').prop('muted'))
+  })
+
+  // Fade in menu after some time
+  setTimeout(function () {
+    //$('#nav').fadeIn(3000)  
+  }, 1500);
+
   // Mute everything but ambience
-  $("audio:not(#ambience)").prop("volume", 0)
+  $('audio:not(#ambience)').prop("volume", 0)
 
   $('.container').mousemove(function (event) {
       event.preventDefault();
