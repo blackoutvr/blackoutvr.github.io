@@ -1,0 +1,23 @@
+h1:not(:first-child) {
+  margin-top: 50px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+
+  color: #D7D7D7;
+}
+
+h2:not(:first-child) {
+  margin-top: 40px;
+}
+
+h2 {
+  font-weight: 300;
+  color: #A0A0A0;
+}
+
+p {
+
+}

@@ -1,3 +1,17 @@
+function updateScroll() {
+  var st = $(window).scrollTop();
+  var sb = st + $(window).height();
+  var height = $(document).height();
+
+  var nav = 100;
+  var footer = 100;
+
+  $('#nav').css({opacity: Math.max(0, (1 - st/nav))});
+  $('#footer').css({opacity: Math.max(0, 1 - (height - sb)/footer)});
+}
+
+$(window).on('scroll', updateScroll);
+
 function getSound(x, y) {
   if (x === 0 && y === 1) {
     return "light";
@@ -18,17 +32,15 @@ function getSound(x, y) {
 }
 
 $(document).ready(function () {
+  updateScroll();
+  
   var mask1 = $('#mask1 circle')[0];
   var sound = null;
 
-  $('#about, #contact, #press').click(function() {
-    $('.container').fadeOut(3000)  
-  })
-
-  $('#mute').click(function() {
-    $('#mute i').toggleClass('fa-volume-up fa-volume-off')
-
-    $('audio').prop('muted', !$('#ambience').prop('muted'))
+  $('#mute').click(function(e) {
+    e.preventDefault();
+    $('#mute i').toggleClass('fa-volume-up fa-volume-off');
+    $('audio').prop('muted', !$('#ambience').prop('muted'));
   })
 
   // Fade in menu after some time
@@ -92,11 +104,9 @@ $(document).ready(function () {
 
         if (sound !== newSound) {
           if (sound) {
-            console.log("fading out "+sound);
             $("#"+sound).animate({volume: 0.0}, 1000);
           }
           if (newSound) {
-            console.log("fading in "+newSound);
             $("#"+newSound).animate({volume: 1.0}, 1000);
           }
           sound = newSound;

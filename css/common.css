@@ -1,0 +1,64 @@
+#content {
+  color: rgba(255,255,255,.4);
+
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 60%;
+
+  padding-bottom: 240px;
+
+  letter-spacing: .05em;
+  line-height: 21px;
+}
+
+#nav {
+  letter-spacing: .1em;
+
+  text-transform: uppercase;
+
+  top: 10%;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+
+  display: none;
+}
+
+#nav a {
+  margin: 0px 50px;
+}
+
+#nav a.selected {
+  font-weight: 900;
+  color: #D7D7D7;
+}
+
+#footer {
+  text-transform: uppercase;
+  
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.4);
+
+  position: fixed;
+  bottom: 5%;
+  text-align: center;
+  width: 100%;
+}
+
+#footer > .text {
+  font-size: 12px;
+}
+
+#footer > .social {
+  font-size: 30px;
+}
+
+#footer > .volume i {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#footer > div {
+  margin-top: 10px;
+}

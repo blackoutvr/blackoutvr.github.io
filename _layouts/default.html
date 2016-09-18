@@ -14,10 +14,11 @@
     crossorigin="anonymous">
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,100" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/{{page.css}}.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/content.css">
 
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <script type="text/javascript" language="javascript" src="interaction.js"></script>
@@ -57,9 +58,9 @@
     </div>
 
     <div id="nav">
-      <a href="about" id='about'>About</a>
-      <a href="contact" id='contact'>Contact</a>
-      <a href="press-kit" id='press'>Press Kit</a>
+      <a href="about" id='about' class="{% if page.file == 'about' %}selected{% endif %}">About</a>
+      <a href="contact" id='contact' class="{% if page.file == 'contact' %}selected{% endif %}">Contact</a>
+      <a href="press-kit" id='press' class="{% if page.file == 'press' %}selected{% endif %}">Press Kit</a>
     </div>
 
     <div id='content'>
