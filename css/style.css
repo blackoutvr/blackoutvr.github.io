@@ -29,15 +29,6 @@ body, html {
   
 }
 
-#nav {
-  top: 10%;
-  position: fixed;
-  width: 100%;
-  text-align: center;
-
-  display: none;
-}
-
 a {
   letter-spacing: .3em;
   text-decoration: none;
@@ -49,35 +40,4 @@ a {
 
 a:hover {
   color: rgba(255,255,255,.9);  
-}
-
-#nav a {
-  margin: 0px 50px;
-}
-
-#footer {
-  letter-spacing: .1em;
-  color: rgba(255,255,255,.4);
-
-  position: fixed;
-  bottom: 5%;
-  text-align: center;
-  width: 100%;
-}
-
-#footer > .text {
-  font-size: 12px;
-}
-
-#footer > .social {
-  font-size: 30px;
-}
-
-#footer > .volume i {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-#footer > div {
-  margin-top: 10px;
 }

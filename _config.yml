@@ -1,0 +1,8 @@
+defaults:
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "default"
+
+exclude: ['.gitignore', 'CNAME', 'Gemfile', 'Gemfile.lock']
