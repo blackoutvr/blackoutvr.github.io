@@ -4,8 +4,10 @@ function updateScroll() {
   var height = $(document).height();
 
   var nav = 100;
+  var img = 200;
   var footer = 100;
 
+  $('#content-logo').css({opacity: Math.max(0, (1 - st/img))});
   $('#nav').css({opacity: Math.max(0, (1 - st/nav))});
   $('#footer').css({opacity: Math.max(0, 1 - (height - sb)/footer)});
 }

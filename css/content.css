@@ -5,6 +5,7 @@ h1:not(:first-child) {
 h1 {
   text-transform: uppercase;
   font-weight: 100;
+  text-align: center;
 
   color: #D7D7D7;
 }
@@ -20,4 +21,9 @@ h2 {
 
 p {
 
+}
+
+img#content-logo {
+  margin: auto;
+  display: block;
 }

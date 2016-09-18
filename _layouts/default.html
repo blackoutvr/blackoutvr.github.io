@@ -64,6 +64,13 @@
     </div>
 
     <div id='content'>
+      {% if page.path contains 'index' %}
+      {% else %}
+        <a href="/">
+          <img id="content-logo" width="350px" src="assets/SU-logo.png">
+        </a>
+      {% endif %}
+
       {{ content }}
     </div>
 
