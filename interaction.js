@@ -33,7 +33,7 @@ $(document).ready(function () {
 
   // Fade in menu after some time
   setTimeout(function () {
-    //$('#nav').fadeIn(3000)  
+    $('#nav').fadeIn(3000)  
   }, 1500);
 
   // Mute everything but ambience
