@@ -32,10 +32,15 @@ $(document).ready(function () {
   })
 
   // Fade in menu after some time
-  setTimeout(function () {
-    $('#nav').fadeIn(3000)  
-  }, 1500);
-
+  if (window.location.pathname === '/') {
+    setTimeout(function () {
+      $('#nav').fadeIn(2000);
+    }, 1000);  
+  }
+  else {
+    $('#nav').show();
+  }
+  
   // Mute everything but ambience
   $('audio:not(#ambience)').prop("volume", 0)
 
