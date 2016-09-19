@@ -29,21 +29,9 @@ function getSound(x, y) {
   return null;
 }
 
-var moveFlicker = true;
-
 function flicker() {
-  var opacity = Math.random()*0.15 - 0.05;
+  var opacity = Math.random()*0.15 - 0.07;
   $('#flickering-logo').css({opacity: Math.max(0, opacity)});
-
-  if (moveFlicker) {
-    var mask = $('#mask-flicker circle')[0];
-    var x = $(window).width()/2 + Math.random()*450;
-    var y = $(window).height()/2 + Math.random()*188;
-    var translation = "translate(" + Math.round(x) + "px, " + Math.round(y) + "px)";
-    mask.style.transform = translation;
-  }
-
-  moveFlicker = !moveFlicker;
 
   setTimeout(flicker, Math.random()*300 + 100);
 }

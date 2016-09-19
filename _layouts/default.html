@@ -43,11 +43,6 @@
             <rect x="0" y="0" width="100%" height="100%" fill="white" />
             <circle cx="-50%" cy="-50%" r="120" fill="black" filter="url(#blur)" />
           </mask>
-
-          <mask id="mask-flicker">
-            <rect x="0" y="0" width="100%" height="100%" fill="black" />
-            <circle r="120" fill="white" filter="url(#blur)" />
-          </mask>
         </defs>
 
         <image xlink:href="assets/scene-still.png" width="100%" height="100%" opacity="0.9" />
@@ -56,7 +51,7 @@
         {% endif %}
         <image xlink:href="assets/scene-still-dark.png" mask="url(#mask1)" width="100%" height="100%" />
         {% if page.path contains 'index' %}
-          <image xlink:href="assets/SU-logo.png" mask="url(#mask-flicker)" id="flickering-logo" x="50%" y="50%" transform="translate(-225 -150)" width="450px" height="188px" />
+          <image xlink:href="assets/SU-logo.png" id="flickering-logo" x="50%" y="50%" transform="translate(-225 -150)" width="450px" height="188px" />
         {% endif %}
       </svg>
     </div>
