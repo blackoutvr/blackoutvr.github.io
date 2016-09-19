@@ -1,15 +1,11 @@
 function updateScroll() {
   var st = $(window).scrollTop();
-  var sb = st + $(window).height();
-  var height = $(document).height();
 
   var nav = 100;
   var img = 200;
-  var footer = 150;
 
   $('#content-logo').css({opacity: Math.max(0, (1 - st/img))});
   $('#nav').css({opacity: Math.max(0, (1 - st/nav))});
-  $('#footer').css({opacity: Math.max(0, 1 - (height - sb)/footer)});
 }
 
 $(window).on('scroll', updateScroll);
