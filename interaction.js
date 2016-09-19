@@ -31,37 +31,26 @@ function getSound(x, y) {
 
 var moveFlicker = true;
 
-function spotlight() {
-  var mask = $('#mask-flicker circle')[0];
-  if (moveFlicker) {
-    var x = $(window).width()/2 + Math.random()*450;
-    var y = $(window).height()/2 + Math.random()*188;
-    mask.setAttribute("cx", x + 'px');
-    mask.setAttribute("cy", y + 'px');
-
-    mask.style.opacity = 1;
-  }
-  else {
-    mask.style.opacity = 0;
-  }
-
-  setTimeout(spotlight, Math.random()*(moveFlicker ? 200 : 900) + 200);
-
-  moveFlicker = !moveFlicker;
-}
-
 function flicker() {
-  var opacity = Math.random()*0.15 + 0.05;
-
+  var opacity = Math.random()*0.15 - 0.05;
   $('#flickering-logo').css({opacity: Math.max(0, opacity)});
 
-  setTimeout(flicker, Math.random()*300 + 300);
+  if (moveFlicker) {
+    var mask = $('#mask-flicker circle')[0];
+    var x = $(window).width()/2 + Math.random()*450;
+    var y = $(window).height()/2 + Math.random()*188;
+    var translation = "translate(" + Math.round(x) + "px, " + Math.round(y) + "px)";
+    mask.style.transform = translation;
+  }
+
+  moveFlicker = !moveFlicker;
+
+  setTimeout(flicker, Math.random()*300 + 100);
 }
 
 $(document).ready(function () {
   updateScroll();
   flicker();
-  spotlight();
 
   $('#sub-submit').click(function(e) {
     var email = $('input#email').val();
