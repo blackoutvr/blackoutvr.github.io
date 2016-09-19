@@ -49,6 +49,6 @@ John Maitland - Brand & User Interface Designer
 
 ## Advisors
 
-Stephan Vladimir Bugaj - Narrative Advisor  (www.bugaj.com)
+Stephan Vladimir Bugaj - Narrative Advisor ([www.bugaj.com](www.bugaj.com))
 
-Kristoffer Larson - Audio Advisor (www.tensionstudios.net)
+Kristoffer Larson - Audio Advisor ([www.tensionstudios.net](www.tensionstudios.net))

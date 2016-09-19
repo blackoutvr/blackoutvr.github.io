@@ -5,12 +5,12 @@ file: contact
 
 ## Email
 
-info@sightunseen.audio
+[info@sightunseen.audio](mailto:info@sightunseen.audio)
 
 ## Facebook
 
-www.facebook.com/blackoutvirtualreality
+[www.facebook.com/BlackoutVirtualReality](http://www.facebook.com/blackoutvirtualreality)
 
 ## Twitter
 
-www.twitter.com/Blackout_VR
+[www.twitter.com/SightUnseenGame](http://www.twitter.com/SightUnseenGame)

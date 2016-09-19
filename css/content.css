@@ -19,8 +19,8 @@ h2 {
   color: #A0A0A0;
 }
 
-p {
-
+p a {
+  letter-spacing: .05em;
 }
 
 img#content-logo {
