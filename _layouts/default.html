@@ -47,20 +47,15 @@
 
         <image xlink:href="assets/scene-still.png" width="100%" height="100%" opacity="0.9" />
         {% if page.path contains 'index' %}
-          <image xlink:href="assets/coming-soon.png" x="50%" y="50%" transform="translate(-200 -10)" width="400px" height="200px" />
-        {% endif %}
-        <image xlink:href="assets/scene-still-dark.png" mask="url(#mask1)" width="100%" height="100%" />
-
-        {% if page.path contains 'index' %}
           <image xlink:href="assets/SU-logo.png" x="50%" y="50%" transform="translate(-225 -150)" width="450px" height="188px" />
         {% endif %}
+        <image xlink:href="assets/scene-still-dark.png" mask="url(#mask1)" width="100%" height="100%" />
       </svg>
     </div>
 
     <div id="nav">
       <a href="about" id='about' class="{% if page.file == 'about' %}selected{% endif %}">About</a>
       <a href="contact" id='contact' class="{% if page.file == 'contact' %}selected{% endif %}">Contact</a>
-      <a href="press-kit" id='press' class="{% if page.file == 'press' %}selected{% endif %}">Press Kit</a>
     </div>
 
     <div id='content'>
@@ -75,6 +70,14 @@
     </div>
 
     <div id="footer">
+      <div id="subscribe">
+        <div>
+          Coming soon.
+          <br />
+          Be the first to know:
+        </div>
+        <input id="email" placeholder="enter your email"></input><button id="sub-submit"><i id="subicon" class="fa fa-arrow-right"></i></button>
+      </div>
       <div class="volume">
         <a href="#" id='mute'>
           <i class="fa fa-volume-up"></i>&nbsp;
