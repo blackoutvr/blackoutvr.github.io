@@ -4,7 +4,7 @@ function updateScroll() {
   var nav = 100;
   var img = 200;
 
-  $('#content-logo').css({opacity: Math.max(0, (1 - st/img))});
+  $('#content-logo').css({opacity: Math.max(0, (1 - st/img) - 0.3)});
   $('#nav').css({opacity: Math.max(0, (1 - st/nav))});
 }
 
@@ -30,10 +30,10 @@ function getSound(x, y) {
 }
 
 function flicker() {
-  var opacity = Math.random()*0.15 - 0.07;
+  var opacity = Math.random()*0.1 - 0.025;
   $('#flickering-logo').css({opacity: Math.max(0, opacity)});
 
-  setTimeout(flicker, Math.random()*300 + 100);
+  setTimeout(flicker, Math.random()*4000 + 4500);
 }
 
 $(document).ready(function () {
@@ -80,11 +80,11 @@ $(document).ready(function () {
   if (window.location.pathname === '/') {
     setTimeout(function () {
       $('#nav').fadeIn(1500);
-    }, 1000);  
+    }, 2000);  
 
     setTimeout(function () {
-      $('#subscribe').fadeIn(2000);
-    }, 2000);  
+      $('#subscribe').fadeIn(2500);
+    }, 3000);  
   }
   else {
     $('#nav').show();
